@@ -67,7 +67,7 @@ zapier.com
 ---
 
 ## 📓 Notes
-- Uses Proxycurl's company API for enrichment (Free for limited requests)
+- Uses Proxycurl's company API first, but it is now changed to Enriched Layer for enrichment (Free for limited requests)
 - Built for a 5-hour challenge focused on usability, business value, and rapid development
 
 ---
