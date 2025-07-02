@@ -1,4 +1,4 @@
-🚀 Lead Enrichment & Scoring Tool
+ ## 🚀 Lead Enrichment & Scoring Tool
 
 A lightweight Streamlit-based tool to enrich B2B leads using company domain or LinkedIn URLs and generate a lead quality score based on industry, size, and location. Ideal for sales and marketing teams needing smarter prospecting.
 
@@ -52,14 +52,14 @@ Edit
 streamlit run app.py
 Then open your browser at http://localhost:8501
 
-##📥 Input Format
+📥 Input Format
 Upload a CSV file with either:
 
 A domain column (e.g., openai.com)
 
 Or a linkedin column (e.g., https://www.linkedin.com/company/openai)
 
-##📤 Output Columns
+📤 Output Columns
 Column	Description
 name	Company name
 industry	Business sector
