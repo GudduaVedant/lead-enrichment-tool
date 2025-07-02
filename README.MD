@@ -1,79 +1,84 @@
-# README.md
+🚀 Lead Enrichment & Scoring Tool
 
-# 🔍 Lead Enrichment & Scoring Tool
-
-A lightweight Streamlit-based web tool to upload a list of company domains or LinkedIn URLs, enrich them using Proxycurl's API, score them based on business criteria, and export the results. Built in under 5 hours to solve real-world lead generation problems effectively.
+A lightweight Streamlit-based tool to enrich B2B leads using company domain or LinkedIn URLs and generate a lead quality score based on industry, size, and location. Ideal for sales and marketing teams needing smarter prospecting.
 
 ---
 
-## 🚀 Features
-- Upload CSV file with company domains or LinkedIn company URLs
-- Fetch real-time company enrichment data via Proxycurl
-- Score leads based on industry, employee count, and location
-- Preview and download the enriched lead list
+ 📌 Features
+
+- 🔍 Enriches leads using [EnrichLayer API] or similar tools
+- 🏷️ Extracts:
+  - Company Name
+  - Industry
+  - Employee Count
+  - Location
+  - LinkedIn Profile URL
+- 📊 Assigns lead **score** based on business relevance
+- 📤 CSV upload & download
+- ✅ Simple, clean UI via Streamlit
 
 ---
 
-## 📦 Requirements
-Make sure you have Python 3.7+ installed. Then install dependencies:
+## 🛠️ Installation
+
+1. Clone the repository:
 
 ```bash
+git clone https://github.com/GudduaVedant/lead-enrichment-tool.git
+cd lead-enrichment-tool
+Create a virtual environment and activate it:
+
+bash
+Copy
+Edit
+python -m venv venv
+venv\Scripts\activate   # For Windows
+Install dependencies:
+
+bash
+Copy
+Edit
 pip install -r requirements.txt
-```
+Create a .env file:
 
-### Required `.env` file
-Create a `.env` file in the root folder and add your Proxycurl API key:
-
-```
-PROXYCURL_API_KEY=your_api_key_here
-```
-
----
-
-## 🛠️ How to Run
-
-```bash
+env
+Copy
+Edit
+ENRICHLAYER_API_KEY=your_api_key_here
+▶️ Running the App
+bash
+Copy
+Edit
 streamlit run app.py
-```
+Then open your browser at http://localhost:8501
 
-Then open the URL shown in the terminal (usually `http://localhost:8501`) in your browser.
+##📥 Input Format
+Upload a CSV file with either:
 
----
+A domain column (e.g., openai.com)
 
-## 📁 Project Structure
+Or a linkedin column (e.g., https://www.linkedin.com/company/openai)
 
-```
-lead-enrichment-tool/
-├── app.py              # Main Streamlit app
-├── utils.py            # Enrichment + scoring functions
-├── requirements.txt    # Python dependencies
-├── .env                # Proxycurl API key (not to be committed)
-└── README.md           # This file
-```
+##📤 Output Columns
+Column	Description
+name	Company name
+industry	Business sector
+employee_count	Estimated number of employees
+location	Headquarter or operational region
+LinkedIn Profile	Company LinkedIn URL
+score	Lead score (0–100)
 
----
+🧠 Scoring Logic (Simplified)
++40 points for relevant industries
 
-## 📤 Sample Input Format
++30 for medium-sized teams
 
-Upload a CSV file like:
++30 for specific locations
 
-```
-domain
-https://www.linkedin.com/company/openai
-stripe.com
-zapier.com
-```
+🧾 License
+MIT License — free for personal and commercial use.
 
----
+🙋‍♂️ Author
+Built by Vedant Joshi
+LinkedIn
 
-## 📓 Notes
-- Uses Proxycurl's company API first, but it is now changed to Enriched Layer for enrichment (Free for limited requests)
-- Built for a 5-hour challenge focused on usability, business value, and rapid development
-
----
-
-## 👤 Author
-**Vedant Joshi**  
-GitHub: [@GudduaVedant](https://github.com/GudduaVedant)
-
-Feel free to fork, improve, or suggest features!
